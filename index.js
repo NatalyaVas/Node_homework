@@ -4,7 +4,7 @@ import colors from 'colors'; //для использования es6 module сд
 const leftNum = process.argv.slice(2);
 const rightNum = process.argv.slice(3);
 
-if(isNan(leftRest) || isNan(rightNum)){
+if(isNan(leftNum) || isNan(rightNum)){
     console.log(colors.red('Введены некорректные параметры'));
 }
 
