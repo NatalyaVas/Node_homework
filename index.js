@@ -8,7 +8,7 @@ const rightNum = +(process.argv[3]);
 
 function noSimpleNum () {
 	if(isNaN(leftNum) || isNaN(rightNum)){
-		console.log(colors.red('Введенные данные не являются числом'));
+		console.log(colors.red('Введенные данные должны быть вида: 0 100'));
 		return true;
 	}
 	if(leftNum > rightNum) {
@@ -22,25 +22,26 @@ function noSimpleNum () {
 	return false;
 }
 
-function createColors(numbers) {
+function createColors(leftNum,rightNum) {
 	if (noSimpleNum())
 		return false;
 	let color = 'green';
-	numbers.forEach(number => {
+	for(let i = leftNum; i<=rightNum; i++) {
 		switch (color) {
 			case 'green':
-				console.log(colors.green(number));
+				console.log(colors.green(i));
 				color = 'yellow';
 				break;
 			case 'yellow':
-				console.log(colors.yellow(number));
+				console.log(colors.yellow(i));
 				color = 'red';
 				break;
 			case 'red':
-				console.log(colors.red(number));
+				console.log(colors.red(i));
 				color = 'green';
 				break;
 		}
-	});
+	};
 }
-createColors(leftNum, rightNum)
+
+createColors(leftNum, rightNum);
