@@ -26,7 +26,10 @@ function createColors(leftNum,rightNum) {
 	if (noSimpleNum())
 		return false;
 	let color = 'green';
-	for(let i = leftNum; i<=rightNum; i++) {
+	for(let i = leftNum; i <= rightNum; i++) {
+		if (i < 2) {
+			continue;
+		}
 		switch (color) {
 			case 'green':
 				console.log(colors.green(i));
@@ -40,8 +43,29 @@ function createColors(leftNum,rightNum) {
 				console.log(colors.red(i));
 				color = 'green';
 				break;
+		
 		}
-	};
+	}
 }
+// for(let i = leftNum; i <= rightNum; i++) {
+// 		if (leftNum < 2) {
+// 			i = 2;
+// 		}
+// 		switch (color) {
+// 			case 'green':
+// 				console.log(colors.green(i));
+// 				color = 'yellow';
+// 				break;
+// 			case 'yellow':
+// 				console.log(colors.yellow(i));
+// 				color = 'red';
+// 				break;
+// 			case 'red':
+// 				console.log(colors.red(i));
+// 				color = 'green';
+// 				break;
+// 		}
+// 	};
+// }
 
 createColors(leftNum, rightNum);
