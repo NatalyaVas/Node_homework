@@ -47,25 +47,5 @@ function createColors(leftNum,rightNum) {
 		}
 	}
 }
-// for(let i = leftNum; i <= rightNum; i++) {
-// 		if (leftNum < 2) {
-// 			i = 2;
-// 		}
-// 		switch (color) {
-// 			case 'green':
-// 				console.log(colors.green(i));
-// 				color = 'yellow';
-// 				break;
-// 			case 'yellow':
-// 				console.log(colors.yellow(i));
-// 				color = 'red';
-// 				break;
-// 			case 'red':
-// 				console.log(colors.red(i));
-// 				color = 'green';
-// 				break;
-// 		}
-// 	};
-// }
 
 createColors(leftNum, rightNum);
